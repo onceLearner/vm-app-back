@@ -1,12 +1,12 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
-VMSchema = new Schema( {
-	nom: String,
-	ip: String,
+var mongoose=require('mongoose');
+
+var VmSchema = new mongoose.Schema({
+	ip:String,
+	nom:String,
 	systeme:String,
 	etat:Boolean
-}),
-Vm = mongoose.model('vm', VMSchema);
+});
 
-module.exports = Vm;
+module.exports = mongoose.model(
+	'vm', VmSchema, 'vms');
