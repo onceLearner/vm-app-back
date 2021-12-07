@@ -52,7 +52,7 @@ app.get("/",index );
 // Les cruds  des machines virtuelles
 app.get("/vms",controller_get_all );
 app.get("/vms/:ip",controller_get_one);
-app.post("/vms1", controller_Add);
+app.post("/vms", controller_Add);
 app.put("/vms/:ip", controller_update);
 app.delete("/vms/:ip",controller_delete)
 
